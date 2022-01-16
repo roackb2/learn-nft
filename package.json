@@ -1,5 +1,5 @@
 {
-  "name": "legs-nft",
+  "name": "learn-nft",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "deploy": "node scripts/deploy.js"
   },
   "bin": {
-    "legs-nft": "scripts/index.js"
+    "learn-nft": "scripts/index.js"
   },
   "author": "",
   "license": "ISC",

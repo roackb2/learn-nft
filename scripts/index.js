@@ -9,7 +9,7 @@ const {
 
 program
   .command('deploy')
-  .description('Deploy legs-nft program')
+  .description('Deploy learn-nft program')
   .action(deploy)
 
 program
