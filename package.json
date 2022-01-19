@@ -5,7 +5,31 @@
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "node scripts/deploy.js"
+    "compile": "npx hardhat compile",
+    "local": "npx hardhat --network localhost",
+    "deploy": "npm run local -- deploy",
+    "console": "npm run local -- console",
+    "list-accounts": "npm run local -- list-accounts",
+    "get-balance": "npm run local -- get-balance",
+    "mint": "npm run local -- mint",
+    "rinkeby": "npx hardhat --network rinkeby",
+    "rinkeby:deploy": "npm run rinkeby -- deploy",
+    "rinkeby:console": "npm run rinkeby -- console",
+    "rinkeby:list-accounts": "npm run rinkeby -- list-accounts",
+    "rinkeby:get-balance": "npm run rinkeby -- get-balance",
+    "rinkeby:mint": "npm run rinkeby -- mint",
+    "mainnet": "npx hardhat --network mainnet",
+    "mainnet:deploy": "npm run mainnet -- deploy",
+    "mainnet:console": "npm run mainnet -- console",
+    "mainnet:list-accounts": "npm run mainnet -- list-accounts",
+    "mainnet:get-balance": "npm run mainnet -- get-balance",
+    "mainnet:mint": "npm run mainnet -- mint",
+    "matic": "npx hardhat --network matic",
+    "matic:deploy": "npm run matic -- deploy",
+    "matic:console": "npm run matic -- console",
+    "matic:list-accounts": "npm run matic -- list-accounts",
+    "matic:get-balance": "npm run matic -- get-balance",
+    "matic:mint": "npm run matic -- mint"
   },
   "bin": {
     "learn-nft": "scripts/index.js"
@@ -15,11 +39,19 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@nomiclabs/hardhat-truffle5": "^2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "web3": "^1.6.1",
     "chai": "^4.3.4",
     "commander": "^8.3.0",
     "dotenv": "^12.0.3",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3",
     "hardhat": "^2.8.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2"
   }
 }
