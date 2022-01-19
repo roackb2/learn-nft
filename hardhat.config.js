@@ -18,6 +18,8 @@ const {
   RINKEBY_ACCOUNT_PRIVATE_KEY,
   MATIC_ALCHEMY_API_KEY,
   MATIC_ACCOUNT_PRIVATE_KEY,
+  MUMBAI_ALCHEMY_API_KEY,
+  MUMBAI_ACCOUNT_PRIVATE_KEY,
   ETHERSCAN_API_KEY
 } = process.env
 
@@ -50,6 +52,12 @@ module.exports = {
     matic: {
       url: `https://polygon-mainnet.g.alchemy.com/v2/${MATIC_ALCHEMY_API_KEY}`,
       accounts: [MATIC_ACCOUNT_PRIVATE_KEY]
+    },
+    mumbai: {
+      url: `https://polygon-mumbai.g.alchemy.com/v2/${MUMBAI_ALCHEMY_API_KEY}`,
+      accounts: [MUMBAI_ACCOUNT_PRIVATE_KEY],
+      gas: 2100000,
+      gasPrice: 8000000000
     }
   }
 };

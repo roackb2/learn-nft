@@ -7,6 +7,8 @@ async function getContractAddress() {
       return process.env.RINKEBY_CONTRACT_ADDRESS
     case 'matic':
       return process.env.MATIC_CONTRACT_ADDRESS
+    case 'maticmum': // the mumbai MATIC testnet
+      return process.env.MUMBAI_CONTRACT_ADDRESS
     default:
       return process.env.CONTRACT_ADDRESS
   }

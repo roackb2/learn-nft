@@ -29,7 +29,13 @@
     "matic:console": "npm run matic -- console",
     "matic:list-accounts": "npm run matic -- list-accounts",
     "matic:get-balance": "npm run matic -- get-balance",
-    "matic:mint": "npm run matic -- mint"
+    "matic:mint": "npm run matic -- mint",
+    "mumbai": "npx hardhat --network mumbai",
+    "mumbai:deploy": "npm run mumbai -- deploy",
+    "mumbai:console": "npm run mumbai -- console",
+    "mumbai:list-accounts": "npm run mumbai -- list-accounts",
+    "mumbai:get-balance": "npm run mumbai -- get-balance",
+    "mumbai:mint": "npm run mumbai -- mint"
   },
   "bin": {
     "learn-nft": "scripts/index.js"
