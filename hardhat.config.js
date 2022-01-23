@@ -8,7 +8,8 @@ const deploy = require('./scripts/deploy.js')
 const {
   listAccounts,
   getBalance,
-  mint
+  mint,
+  mintWords
 } = require('./scripts/actions')
 const { task } = require('hardhat/config')
 const {
@@ -27,7 +28,7 @@ task("deploy", "Deploy our Box contract").setAction(deploy)
 task("list-accounts", "List all accounts").setAction(listAccounts)
 task("get-balance", "Get balance in first account").setAction(getBalance)
 task("mint", "Mint our Epic NFT").setAction(mint)
-
+task("mint-words", "Mint NFT of randomly generated sentence").setAction(mintWords)
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
