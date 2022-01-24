@@ -40,14 +40,14 @@ async function mint() {
   const contract = await attachContract()
   const txn = await contract.mint()
   await txn.wait()
-  console.log(`Item minted to ${txn.to}`)
+  console.log(`Item minted from contract ${txn.to}`)
 }
 
 async function mintWords() {
   const contract = await attachContract()
   const txn = await contract.mintWords()
   await txn.wait()
-  console.log(`Item minted to ${txn.to}`)
+  console.log(`Item minted from contract ${txn.to}`)
 }
 
 module.exports = {

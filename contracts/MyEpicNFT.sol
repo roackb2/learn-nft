@@ -22,7 +22,9 @@ contract MyEpicNFT is ERC721URIStorage {
     console.log("My Epic NFT");
   }
 
-    function random(string memory input) internal pure returns (uint256) {
+  event NewEpicNFTMinted (address sender, uint256 tokenId);
+
+  function random(string memory input) internal pure returns (uint256) {
     return uint256(keccak256(abi.encodePacked(input)));
   }
 
@@ -75,5 +77,7 @@ contract MyEpicNFT is ERC721URIStorage {
     _setTokenURI(newItemId, tokenUri);
     _tokenIds.increment();
     console.log("An NFT of random words with ID  %s has been minted to %s", newItemId, msg.sender);
+    emit NewEpicNFTMinted(msg.sender, newItemId);
   }
+
 }
