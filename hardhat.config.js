@@ -46,10 +46,6 @@ module.exports = {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${RINKEBY_ALCHEMY_API_KEY}`,
       accounts: [RINKEBY_ACCOUNT_PRIVATE_KEY]
     },
-    etherscan: {
-      url: `https://eth-mainnet.alchemyapi.io/v2/${MAINNET_ALCHEMY_API_KEY}`,
-      apiKey: ETHERSCAN_API_KEY
-    },
     matic: {
       url: `https://polygon-mainnet.g.alchemy.com/v2/${MATIC_ALCHEMY_API_KEY}`,
       accounts: [MATIC_ACCOUNT_PRIVATE_KEY]
@@ -60,5 +56,10 @@ module.exports = {
       gas: 2100000,
       gasPrice: 8000000000
     }
-  }
+  },
+  etherscan: {
+    apiKey: {
+      rinkeby: ETHERSCAN_API_KEY
+    }
+  },
 };
